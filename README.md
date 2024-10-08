@@ -52,32 +52,32 @@ zplug "danarth/spaceship-taskwarrior"
 ### [antigen]
 
 ```zsh
-antigen bundle "danarth/spaceship-taskwarrior"
+antigen bundle "danarth/spaceship-taskwarrior@main"
 ```
 
 ### [antibody]
 
 ```zsh
-antibody bundle "danarth/spaceship-taskwarrior"
+antibody bundle "danarth/spaceship-taskwarrior@main"
 ```
 
 ### [zinit]
 
 ```zsh
-zinit light "danarth/spaceship-taskwarrior"
+zinit light "danarth/spaceship-taskwarrior@main"
 ```
 
 ### [zgen]
 
 ```zsh
-zgen load "danarth/spaceship-taskwarrior"
+zgen load "danarth/spaceship-taskwarrior@main"
 ```
 
 ### [sheldon]
 
 ```toml
 [plugins.spaceship-section]
-github = "danarth/spaceship-taskwarrior"
+github = "danarth/spaceship-taskwarrior@main"
 ```
 
 ### Manual
