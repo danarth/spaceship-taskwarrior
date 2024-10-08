@@ -1,5 +1,5 @@
 <h1 align="center">
-  😍 + 🚀
+  ☑️  + 🚀
   <br>Spaceship Section<br>
 </h1>
 
@@ -8,13 +8,13 @@
 </h4>
 
 <p align="center">
-  <a href="https://github.com/spaceship-prompt/spaceship-section/releases">
-    <img src="https://img.shields.io/github/v/release/spaceship-prompt/spaceship-section.svg?style=flat-square"
+  <a href="https://github.com/danarth/spaceship-taskwarrior/releases">
+    <img src="https://img.shields.io/github/v/release/danarth/spaceship-taskwarrior.svg?style=flat-square"
       alt="GitHub Release" />
   </a>
 
-  <a href="https://github.com/spaceship-prompt/spaceship-section/actions">
-    <img src="https://img.shields.io/github/actions/workflow/status/spaceship-prompt/spaceship-gradle/ci.yaml?style=flat-square"
+  <a href="https://github.com/danarth/spaceship-taskwarrior/actions">
+    <img src="https://img.shields.io/github/actions/workflow/status/danarth/spaceship-taskwarrior/ci.yaml?style=flat-square"
       alt="GitHub Workflow Status" />
   </a>
 </p>
