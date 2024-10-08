@@ -10,7 +10,7 @@ typeset -g SPACESHIP_ROOT="${SPACESHIP_ROOT:=/spaceship}"
 
 # Mocked tool CLI
 mock_task_count="12"
-taskwarrior() {
+task() {
   echo "$mock_task_count"
 }
 
@@ -27,7 +27,7 @@ oneTimeSetUp() {
   export TERM="xterm-256color"
 
   source "$SPACESHIP_ROOT/spaceship.zsh"
-  source "$(dirname $CWD)/spaceship-section.plugin.zsh"
+  source "$(dirname $CWD)/spaceship-taskwarrior.plugin.zsh"
 
   SPACESHIP_PROMPT_ASYNC=false
   SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=true
@@ -49,9 +49,6 @@ oneTimeTearDown() {
 # ------------------------------------------------------------------------------
 
 test_mock_task_count() {
-  # Prepare the environment
-  touch $SHUNIT_TMPDIR/test.foo
-
   local prefix="%{%B%}$SPACESHIP_TASKWARRIOR_PREFIX%{%b%}"
   local content="%{%B%F{$SPACESHIP_TASKWARRIOR_COLOR}%}$SPACESHIP_TASKWARRIOR_SYMBOL$mock_task_count%{%b%f%}"
   local suffix="%{%B%}$SPACESHIP_TASKWARRIOR_SUFFIX%{%b%}"

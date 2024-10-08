@@ -115,7 +115,7 @@ This section is shown only in directories within a foobar context.
 | Variable                   |              Default               | Meaning                              |
 | :------------------------- | :--------------------------------: | ------------------------------------ |
 | `SPACESHIP_TASKWARRIOR_SHOW`   |               `true`               | Show current section                 |
-| `SPACESHIP_TASKWARRIOR_PREFIX` | `$SPACESHIP_PROMPT_DEFAULT_PREFIX` | Prefix before section                |
+| `SPACESHIP_TASKWARRIOR_PREFIX` | `with ` | Prefix before section                |
 | `SPACESHIP_TASKWARRIOR_SUFFIX` | `$SPACESHIP_PROMPT_DEFAULT_SUFFIX` | Suffix after section                 |
 | `SPACESHIP_TASKWARRIOR_SYMBOL` |               `󰱒`                | Character to be shown before number of tasks |
 | `SPACESHIP_TASKWARRIOR_COLOR`  |             `green`               | Color of section                     |
