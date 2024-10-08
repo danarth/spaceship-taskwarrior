@@ -9,9 +9,9 @@ SHUNIT_PARENT=$0
 typeset -g SPACESHIP_ROOT="${SPACESHIP_ROOT:=/spaceship}"
 
 # Mocked tool CLI
-mocked_version="v1.0.0-mocked"
-foobar() {
-  echo "$mocked_version"
+mock_task_count="12"
+taskwarrior() {
+  echo "$mock_task_count"
 }
 
 # ------------------------------------------------------------------------------
@@ -32,7 +32,7 @@ oneTimeSetUp() {
   SPACESHIP_PROMPT_ASYNC=false
   SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=true
   SPACESHIP_PROMPT_ADD_NEWLINE=false
-  SPACESHIP_PROMPT_ORDER=(foobar)
+  SPACESHIP_PROMPT_ORDER=(taskwarrior)
 
   echo "Spaceship version: $(spaceship --version)"
 }
@@ -48,25 +48,18 @@ oneTimeTearDown() {
 # TEST CASES
 # ------------------------------------------------------------------------------
 
-test_incorrect_env() {
-  local expected=""
-  local actual="$(spaceship::testkit::render_prompt)"
-
-  assertEquals "do not render system version" "$expected" "$actual"
-}
-
-test_mocked_version() {
+test_mock_task_count() {
   # Prepare the environment
   touch $SHUNIT_TMPDIR/test.foo
 
-  local prefix="%{%B%}$SPACESHIP_FOOBAR_PREFIX%{%b%}"
-  local content="%{%B%F{$SPACESHIP_FOOBAR_COLOR}%}$SPACESHIP_FOOBAR_SYMBOL$mocked_version%{%b%f%}"
-  local suffix="%{%B%}$SPACESHIP_FOOBAR_SUFFIX%{%b%}"
+  local prefix="%{%B%}$SPACESHIP_TASKWARRIOR_PREFIX%{%b%}"
+  local content="%{%B%F{$SPACESHIP_TASKWARRIOR_COLOR}%}$SPACESHIP_TASKWARRIOR_SYMBOL$mock_task_count%{%b%f%}"
+  local suffix="%{%B%}$SPACESHIP_TASKWARRIOR_SUFFIX%{%b%}"
 
   local expected="$prefix$content$suffix"
   local actual="$(spaceship::testkit::render_prompt)"
 
-  assertEquals "render mocked version" "$expected" "$actual"
+  assertEquals "render mocked task count" "$expected" "$actual"
 }
 
 # ------------------------------------------------------------------------------
