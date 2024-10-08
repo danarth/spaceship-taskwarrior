@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/spaceship-prompt/spaceship-prompt:latest
     steps:
-      - name: ⬇️ Checkout Repo
-        uses: actions/checkout@v2
+      - name: ⬇️  Checkout Repo
+        uses: actions/checkout@v1
 
       - name: 🖨 Print Zsh Version
         run: zsh --version
@@ -27,8 +27,8 @@ jobs:
     if: ${{ github.repository == 'danarth/spaceship-taskwarrior' && github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
-      - name: ⬇️ Checkout Repo
-        uses: actions/checkout@v2
+      - name: ⬇️  Checkout Repo
+        uses: actions/checkout@v1
 
       - name: 🚀 Release
         uses: cycjimmy/semantic-release-action@v2
